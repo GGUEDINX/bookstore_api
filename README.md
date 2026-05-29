@@ -29,13 +29,3 @@ bookstore_api/
 │   └── database.py    # Configuração da conexão com o banco
 ├── requirements.txt   # Dependências do projeto
 └── README.md          # Documentação
-
-## Como Executar o Projeto
-
-### Pré-requisitos
-* [Docker](https://www.docker.com/products/docker-desktop/) instalado.
-
-### Passo a Passo
-1. Clone o repositório:
-   ```bash
-   git clone [https://github.com/SEU_USUARIO/bookstore_api.git](https://github.com/SEU_USUARIO/bookstore_api.git)
