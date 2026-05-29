@@ -1,0 +1,22 @@
+services:
+  db:
+    image: postgres
+    container_name: bookstore-db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: bookstore_db
+    ports:
+      - "5432:5432"
+
+  api:
+    build: .
+    container_name: bookstore-api
+    restart: on-failure
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      SQLALCHEMY_DATABASE_URL: "postgresql://postgres:1234@db:5432/bookstore_db"
